@@ -64,6 +64,28 @@
             bottom: 0;
             width: 100%;
         }
+        
+        .project {
+            background-color: #2c3e50;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .project h3 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        .project-details {
+            display: none;
+        }
+        .project-toggle {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
@@ -72,9 +94,10 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -83,46 +106,95 @@
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>I am an Assistant Professor in the Department of Computer Science at XYZ University. My research focuses on artificial intelligence and machine learning, with a particular emphasis on natural language processing and computer vision. I received my Ph.D. in Computer Science from ABC University in 2020.</p>
+            <p>I am a Mechatronics Engineering graduate from K. N. Toosi University of Technology, specializing in robotics and artificial intelligence. My research focuses on motion planning for deployable under-actuated cable-driven parallel robots, kinematic calibration of spherical parallel robots, and novel calibration methods for large-scale suspended CDPRs.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <h3>M.Sc. in Mechatronics Engineering</h3>
+            <p>K. N. Toosi University of Technology (#234 in Robotics), Tehran, Iran</p>
+            <p>Graduated: September 2023 | GPA: 3.3</p>
+            <p>Dissertation: Trajectory Planning and Implementation of a Deployable Underactuated Cable-Driven Parallel Robot (Thesis grade: A)</p>
+
+            <h3>B.Sc. in Mechanical Engineering</h3>
+            <p>Shahid Beheshti University, Tehran, Iran</p>
+            <p>Graduated: August 2019</p>
+            <p>Dissertation: Design and Implementation of a Dual Axis Solar Tracker (Thesis Grade: 20/20)</p>
         </section>
 
         <section id="research">
             <h2>Research Interests</h2>
+            <h3>Robotics:</h3>
             <ul>
-                <li>Natural Language Processing: Focusing on machine translation and sentiment analysis</li>
-                <li>Computer Vision: Developing algorithms for object detection and image segmentation</li>
-                <li>Machine Learning: Exploring deep learning architectures for various applications</li>
+                <li>Modeling and Designing Robots</li>
+                <li>Localization & Pose Estimation</li>
+                <li>Factor Graphs & Optimization</li>
+                <li>Design & Embedded Hardware</li>
+                <li>Optimal Control & Model Predictive Control (MPC)</li>
+                <li>3D CAD Design</li>
+            </ul>
+            <h3>Artificial Intelligence:</h3>
+            <ul>
+                <li>Machine Learning: Supervised & Unsupervised Learning, Physics Informed Machine Learning</li>
+                <li>Reinforcement Learning: Deep Deterministic Policy Gradient (DDPG)</li>
+                <li>Computer Vision: Convolutional Neural Networks (CNN), YOLO, Pose Detection, Transfer Learning</li>
+            </ul>
+            <h3>Machine Vision:</h3>
+            <ul>
+                <li>3D Reconstruction: Triangulation, Stereo-vision, Bundle Adjustment</li>
+                <li>Visual Odometry (VO), Simultaneous Localization and Mapping (SLAM)</li>
             </ul>
         </section>
 
         <section id="publications">
             <h2>Publications</h2>
-            <ol>
-                <li>Mirjalili, A.S., et al. (2022). "A Novel Approach to Image Segmentation Using Deep Learning." Journal of Computer Vision, 45(3), 256-270.</li>
-                <li>Smith, J., Mirjalili, A.S., & Johnson, K. (2021). "Improving Machine Translation with Attention Mechanisms." Proceedings of the International Conference on Natural Language Processing, 123-135.</li>
-            </ol>
-        </section>
-
-        <section id="teaching">
-            <h2>Teaching</h2>
-            <h3>Courses Taught:</h3>
+            <h3>Accepted (Not Yet Indexed)</h3>
             <ul>
-                <li>CS101: Introduction to Programming</li>
-                <li>CS301: Machine Learning Fundamentals</li>
-                <li>CS401: Advanced Topics in Artificial Intelligence</li>
+                <li>A Graph-Based Self-Calibration Technique for Cable-Driven Robots with Sagging Cable - IROS (2024)</li>
+            </ul>
+            <h3>Conference Papers</h3>
+            <ol>
+                <li>M.R. Dindarloo, A.S. Mirjalili, et al. "Kinematic Calibration of a Spherical Parallel Robot," 2023 11th RSI International Conference on Robotics and Mechatronics (ICRoM), 2023.</li>
+                <li>Gitifar, S., Mirjalili, A.S., et al. "Experimental evaluation of the open-loop control method for a dual-axis solar tracker." Modares Mechanical Engineering (2023).</li>
+            </ol>
+            <h3>Patents</h3>
+            <ul>
+                <li>US20230402961A1: Dual-axis solar tracker with hybrid control and the possibility of full rotation</li>
+                <li>2021346299: Dual-axis solar tracker with hybrid control and possibility of full rotation</li>
+                <li>WO2022079499: Dual-axis solar tracker with hybrid control and the possibility of full rotation</li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: amir.mirjalili@xyzuniversity.edu</p>
-            <p>Office: Room 301, Computer Science Building, XYZ University</p>
-            <p>Phone: (123) 456-7890</p>
+            <p>Email: amirsamanmirjalili@gmail.com</p>
+            <p>Phone: (+98) 919 533 8794</p>
+            <p>Location: Tehran, Iran</p>
+            <p>
+                <a href="#">Github</a> |
+                <a href="#">Google Scholar</a> |
+                <a href="#">LinkedIn</a>
+            </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Amir Saman Mirjalili. All rights reserved.</p>
+        <p>&copy; 2024 Amir Saman Mirjalili. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.project-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const details = button.nextElementSibling;
+                if (details.style.display === 'none' || details.style.display === '') {
+                    details.style.display = 'block';
+                    button.textContent = 'Hide Details';
+                } else {
+                    details.style.display = 'none';
+                    button.textContent = 'Show Details';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
