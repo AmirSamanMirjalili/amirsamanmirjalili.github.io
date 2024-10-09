@@ -30,6 +30,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            text-align: center;
         }
 
         .container {
@@ -114,7 +115,7 @@
             transform: translateY(0);
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 100px) {
             nav ul {
                 flex-direction: column;
                 align-items: center;
@@ -123,23 +124,70 @@
             nav ul li {
                 margin: 0.5rem 0;
             }
+
+            .header-content {
+                flex-direction: column-reverse;
+            }
+
+            .personal-image {
+                margin-left: 0;
+                margin-bottom: 1rem;
+            }
+
+            /* ... other existing media query styles ... */
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-text {
+            flex-grow: 1;
+        }
+
+        .personal-image {
+            width: 150px;  /* Set a fixed width */
+            height: 150px; /* Set a fixed height */
+            border-radius: 50%; /* Make it circular */
+            object-fit: cover; /* Ensure the image covers the area without stretching */
+            margin-left: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            /* ... existing media query styles ... */
+
+            .header-content {
+                flex-direction: column-reverse;
+            }
+
+            .personal-image {
+                margin-left: 0;
+                margin-bottom: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Amir Saman Mirjalili</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Amir Saman Mirjalili  </h1>
+                    <nav>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#research">Research</a></li>
+                            <li><a href="#publications">Publications</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <img src="media/personal.JPG" alt="Amir Saman Mirjalili" class="personal-image">
+            </div>
         </div>
     </header>
 
