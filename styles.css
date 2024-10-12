@@ -447,19 +447,56 @@ img {
         width: 100% !important;
         margin-bottom: 1rem;
     }
+
+    /* Header adjustments for mobile */
+    header {
+        padding: 0.5rem;
+    }
+
+    .header-content {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .personal-image {
+        width: 60px;
+        height: 60px;
+        margin-left: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .header-text h1 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0.25rem 0.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
 }
 
-/* Improve readability on small screens */
+/* Further adjustments for very small screens */
 @media (max-width: 480px) {
-    body {
-        font-size: 14px;
+    .header-content {
+        flex-direction: column;
     }
 
-    .container {
-        padding: 0 0.5rem;
+    .personal-image {
+        margin-bottom: 0.5rem;
     }
 
-    section, .research-project {
-        padding: 1rem;
+    nav ul li {
+        margin: 0.25rem;
     }
 }
+
