@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir Saman Mirjalili - Publications</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="include-header.js"></script>
+</head>
+<body>
+    <header></header>
+
+    <main class="container">
+        <section id="publications" class="fade-in-section">
+            <h2>Publications</h2>
+            <h3>Accepted (Not Yet Indexed)</h3>
+            <ul>
+                <li>A Graph-Based Self-Calibration Technique for Cable-Driven Robots with Sagging Cable - IROS (2024) <a href="https://drive.google.com/file/d/12x2HPj6vv80_Vc3dRdcnYcD0UGfJlvtS/view?usp=sharing" target="_blank">[Link]</a></li>
+            </ul>
+            <h3>Conference Papers</h3>
+            <ol>
+                <li>
+                    M.R. Dindarloo, <strong>A.S. Mirjalili</strong>, R. Khorrambakht, S.A. Khalilpour, P. Cardou and H.D. Taghirad, "Kinematic Calibration of a Spherical Parallel Robot," 2023 11th RSI International Conference on Robotics and Mechatronics (ICRoM), Tehran, Iran, Islamic Republic of, 2023, pp. 669-674, doi: 10.1109/ICRoM60803.2023.10412613. 
+                    <a href="https://drive.google.com/file/d/1xQ3zcgaOW9Up-gMPBI9qiqMDW6Fq9o3l/view?usp=sharing" target="_blank">[PDF File]</a> 
+                    <a href="https://doi.org/10.1109/ICRoM60803.2023.10412613" target="_blank">[DOI]</a>
+                </li>
+                <li>
+                    Gitifar, S., <strong>Mirjalili, A.S.</strong>, Jamali, A., Pirvalizadeh, S., and Fakhari, V. "Experimental evaluation of the open-loop control method for a dual-axis solar tracker." Modares Mechanical Engineering (2023): n. pag. (In Persian)
+                    <a href="http://mme.modares.ac.ir/article-15-66669-en.pdf" target="_blank">[PDF File]</a>
+                    <a href="http://dx.doi.org/10.52547/mme.23.2.127" target="_blank">[DOI]</a>
+                </li>
+            </ol>
+            <h3>Patents</h3>
+            <ul>
+                <li>US20230402961A1: Dual-axis solar tracker with hybrid control and the possibility of full rotation</li>
+                <li>2021346299: Dual-axis solar tracker with hybrid control and possibility of full rotation</li>
+                <li>WO2022079499: Dual-axis solar tracker with hybrid control and the possibility of full rotation</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Amir Saman Mirjalili. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const faders = document.querySelectorAll('.fade-in-section');
+
+        const appearOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>

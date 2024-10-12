@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir Saman Mirjalili - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="include-header.js"></script>
+</head>
+<body>
+    <header></header>
+
+    <main class="container">
+        <section id="contact" class="fade-in-section">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Name:</strong>
+                    <span>Amir Saman Mirjalili</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    <a href="mailto:amirsamanmirjalili@gmail.com">amirsamanmirjalili@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Location:</strong>
+                    <span>Tehran, Iran</span>
+                </div>
+                <div class="contact-item">
+                    <strong>LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/in/amir-saman-mirjalili-687612127/" target="_blank">LinkedIn Profile</a>
+                </div>
+                <div class="contact-item">
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/AmirSamanMirjalili" target="_blank">GitHub Profile</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Google Scholar:</strong>
+                    <a href="https://scholar.google.com/citations?hl=en&user=ypSOwOQAAAAJ&view_op=list_works&authuser=1&gmla=ALUCkoVvsEK8t31-WiVDK1ggBF-0uF39MlVNgOiczTxUEkv-baMQhy6i8wAYsAn0Rsl5AlcLuh9qTCzt5e3EKJDl" target="_blank">Google Scholar Profile</a>
+                </div>
+            </div>
+
+            <h3>Get in Touch</h3>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out to me using any of the methods above.</p>
+
+            <h3>Research Affiliation</h3>
+            <p>Currently, I'm an active researcher at the <a href="https://aras.kntu.ac.ir/" target="_blank">Advanced Robotics and Automated Systems (ARAS) Lab</a> at K. N. Toosi University of Technology.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Amir Saman Mirjalili. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const faders = document.querySelectorAll('.fade-in-section');
+
+        const appearOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>

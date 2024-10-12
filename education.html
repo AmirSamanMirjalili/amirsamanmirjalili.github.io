@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir Saman Mirjalili - Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="include-header.js"></script>
+</head>
+<body>
+    <header></header>
+
+    <main class="container">
+        <section id="education" class="fade-in-section">
+            <h2>Education</h2>
+            
+            <div class="education-entry">
+                <h3>M.Sc. in Mechatronics Engineering</h3>
+                <p><strong>Institution:</strong> K. N. Toosi University of Technology (#234 in Robotics), Tehran, Iran</p>
+                <p><strong>Graduation:</strong> September 2023</p>
+                <p><strong>GPA:</strong> 3.3</p>
+                <p><strong>Dissertation:</strong> Trajectory Planning and Implementation of a Deployable Underactuated Cable-Driven Parallel Robot <a href="https://github.com/AmirSamanMirjalili/ArasCam-D" target="_blank">[GitHub]</a></p>
+                <p><strong>Thesis Grade:</strong> A</p>
+                <p><strong>Supervisor:</strong> Prof. Hamid D. Taghirad <a href="https://scholar.google.com/citations?user=P6nfhZMAAAAJ&hl=en" target="_blank">[Scholar]</a></p>
+                <p><strong>Key Achievements:</strong></p>
+                <ul>
+                    <li>Developed novel trajectory planning techniques for cable-driven parallel robots</li>
+                    <li>Implemented and tested algorithms on a real-world deployable robot system</li>
+                    <li>Published research findings in international conferences</li>
+                </ul>
+            </div>
+
+            <div class="education-entry">
+                <h3>B.Sc. in Mechanical Engineering</h3>
+                <p><strong>Institution:</strong> Shahid Beheshti University, Tehran, Iran</p>
+                <p><strong>Graduation:</strong> August 2019</p>
+                <p><strong>Dissertation:</strong> Design and Implementation of a Dual Axis Solar Tracker <a href="https://github.com/AmirSamanMirjalili/ArasCam-D" target="_blank">[GitHub]</a></p>
+                <p><strong>Thesis Grade:</strong> 20/20 (Highest Possible Score)</p>
+                <p><strong>Supervisor:</strong> Dr. Vahid Fakhari <a href="https://scholar.google.com/citations?user=vvqT4WYAAAAJ&hl=en" target="_blank">[Scholar]</a></p>
+                <p><strong>Key Achievements:</strong></p>
+                <ul>
+                    <li>Designed and implemented an innovative dual-axis solar tracker system</li>
+                    <li>Developed a hybrid control system for optimal performance</li>
+                    <li>Project resulted in a patent and a published paper</li>
+                </ul>
+            </div>
+
+            <div class="education-entry">
+                <h3>Relevant Coursework</h3>
+                <ul>
+                    <li>Advanced Robotics</li>
+                    <li>Machine Learning and Artificial Intelligence</li>
+                    <li>Computer Vision and Image Processing</li>
+                    <li>Control Systems and Optimization</li>
+                    <li>Embedded Systems and Microcontrollers</li>
+                    <li>3D CAD Design and Modeling</li>
+                </ul>
+            </div>
+
+            <div class="education-entry">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>Programming Languages: Python, C++, MATLAB</li>
+                    <li>Robotics Frameworks: ROS (Robot Operating System)</li>
+                    <li>CAD Software: SolidWorks</li>
+                    <li>Version Control: Git</li>
+                    <li>Machine Learning Libraries:PyTorch</li>
+                    <li>Simulation Tools: Gazebo, MuJoCo</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Amir Saman Mirjalili. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const faders = document.querySelectorAll('.fade-in-section');
+
+        const appearOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>

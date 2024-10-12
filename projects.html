@@ -4,143 +4,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amir Saman Mirjalili - Projects</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #e0e0e0;
-            background-color: #1a1a1a;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2c3e50;
-            padding: 1rem;
-            text-align: center;
-        }
-        h1 {
-            color: #3498db;
-        }
-        nav ul {
-            padding: 0;
-            list-style-type: none;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 1rem;
-        }
-        nav ul li a {
-            color: #ecf0f1;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #3498db;
-        }
-        main {
-            padding: 2rem;
-        }
-        h2 {
-            color: #3498db;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 0.5rem;
-        }
-        .project {
-            background-color: #2c3e50;
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-        .project h3 {
-            color: #3498db;
-            margin-top: 0;
-        }
-        .project-details {
-            display: none;
-        }
-        .project-toggle {
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="include-header.js"></script>
+    
+    <!-- Add these lines for MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Amir Saman Mirjalili</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#education">Education</a></li>
-                <li><a href="index.html#research">Research</a></li>
-                <li><a href="index.html#publications">Publications</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header></header>
 
-    <main>
+    <main class="container">
         <h2>Projects</h2>
         
-        <div class="project">
-            <h3>Motion Planning for a Deployable Under-Actuated Cable-Driven-Parallel-Robot</h3>
-            <p>M.Sc. Final Project</p>
-            <button class="project-toggle">Show Details</button>
-            <div class="project-details">
-                <p>Description: This project focused on developing efficient motion planning algorithms for a deployable under-actuated cable-driven parallel robot.</p>
-                <img src="ARAS_CAM_D.gif" alt="Deployable Under-Actuated Cable-Driven-Parallel-Robot" style="max-width: 100%; height: auto; margin: 10px 0;">
-                <p>Key achievements:</p>
+        <div class="project fade-in-section">
+            <div class="project-header">
+                <h3>Dual Axis Solar Tracker (My BSc Thesis)</h3>
+                <img src="media/dual_axis_solar_tracker.jpg" alt="Dual Axis Solar Tracker" class="project-thumbnail">
+                <button class="expand-btn">Expand</button>
+            </div>
+            <div class="project-content">
+                <p><strong>Bachelor Thesis Project</strong></p>
+                <div class="project-images">
+                    <img src="media/dual_axis_solar_tracker.jpg" alt="Dual Axis Solar Tracker" class="project-image medium">
+                </div>
+                <p>This project focused on designing and implementing an efficient dual-axis solar tracker system to maximize solar energy capture.</p>
+                <p><strong>Key features:</strong></p>
+                <ul>
+                    <li>Innovative dual-axis tracking mechanism</li>
+                    <li>Hybrid control system for optimal performance</li>
+                    <li>Full rotation capability for increased efficiency</li>
+                </ul>
+                <p><strong>Technologies used:</strong> Arduino, C++, Mechanical Design</p>
+                <p>
+                    <a href="https://github.com/AmirSamanMirjalili/Dual_Axis_Solar_Tracker" target="_blank">GitHub Repository</a> |
+                    <a href="http://dx.doi.org/10.52547/mme.23.2.127" target="_blank">Read the Paper</a> |
+                    <a href="https://patents.google.com/patent/US20230402961A1/en" target="_blank">US Patent</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="project fade-in-section">
+            <div class="project-header">
+                <h3>Trajectory Planning for a Deployable Under-Actuated Cable-Driven-Parallel-Robot</h3>
+                <img src="./media/ARAS_CAM_D.gif" alt="Deployable Under-Actuated Cable-Driven-Parallel-Robot" class="project-thumbnail">
+                <button class="expand-btn">Expand</button>
+            </div>
+            <div class="project-content">
+                <p><strong>M.Sc. Final Project</strong></p>
+                <div class="project-images">
+                    <img src="./media/CDPR.gif" alt="Cable-Driven Parallel Robot" class="project-image medium">
+                    <img src="./media/ARAS_CAM_D.gif" alt="Deployable Under-Actuated Cable-Driven-Parallel-Robot" class="project-image medium">
+                </div>
+                <p>This project focused on developing efficient Rest To Rest trajectory planning considering positve cable tension constraint for a deployable under-actuated cable-driven parallel robot.</p>
+                <p><strong>Key achievements:</strong></p>
                 <ul>
                     <li>Implemented novel trajectory planning techniques</li>
                     <li>Optimized robot performance for various deployment scenarios</li>
                     <li>Conducted extensive simulations and real-world tests</li>
                 </ul>
-                <p>Technologies used: Python, ROS, MATLAB</p>
+                <p><strong>Technologies used:</strong> Python, ROS, MATLAB</p>
             </div>
         </div>
 
-        <div class="project">
-            <h3>Kinematic Calibration of a Spherical Parallel Robot</h3>
-            <p>Research Project</p>
-            <button class="project-toggle">Show Details</button>
-            <div class="project-details">
-                <p>Description: Developed a kinematic calibration method for a spherical parallel robot with an application to eye surgery.</p>
-                <p>Key achievements:</p>
+        <div class="project fade-in-section">
+            <div class="project-header">
+                <h3>TagSLAM-based Visual Kinematic Calibration for Eye Surgical Parallel Robot</h3>
+                <img src="./media/Tagslam_kin_calib.png" alt="TagSLAM-based Visual Kinematic Calibration" class="project-thumbnail">
+                <button class="expand-btn">Expand</button>
+            </div>
+            <div class="project-content">
+                <p><strong>Research Project</strong></p>
+                <div class="project-images">
+                    <img src="./media/Tagslam_kin_calib.png" alt="TagSLAM-based Visual Kinematic Calibration" class="project-image medium">
+                    <img src="./media/Kin_calib_diamond.svg" alt="TagSLAM-based Visual Kinematic Calibration" class="project-image medium">
+                </div>
+                <p>This project focused on developing a novel visual kinematic calibration method for an eye surgical parallel robot using TagSLAM technology.</p>
+                <p><strong>Key achievements:</strong></p>
                 <ul>
-                    <li>Implemented a novel calibration algorithm</li>
-                    <li>Improved robot accuracy for precise medical applications</li>
-                    <li>Published results in a conference paper</li>
+                    <li>Implemented TagSLAM for precise visual tracking of robot components</li>
+                    <li>Developed a kinematic calibration algorithm tailored for parallel robots</li>
+                    <li>Improved accuracy and reliability of the eye surgical robot</li>
+                    <li>Conducted extensive simulations and real-world tests to validate the method</li>
                 </ul>
-                <p>Technologies used: MATLAB, C++</p>
+                <p><strong>Technologies used:</strong> ROS, TagSLAM, C++, Python, OpenCV</p>
+                <p><strong>Impact:</strong> This calibration method significantly enhanced the precision of the eye surgical robot, potentially improving patient outcomes in ophthalmic surgeries.</p>
+                
+                <h4>Error Model on SE(3) Manifold</h4>
+                <p>We employed an advanced error model defined on the SE(3) manifold to accurately represent and minimize the discrepancies between measured and fitted robot poses:</p>
+                <div class="equation">
+                    \[E_a(\zeta) = T_M \ominus T_F = [\log(\text{Rot}(T_F^{-1} T_M))_\vee, \text{Trans}(T_F^{-1} T_M)^T]^T\]
+                </div>
+                <p>This error model allows for precise handling of both rotational and translational errors, crucial for the high accuracy demands of eye surgery applications. It provides a way to compute the difference between two poses in a geometrically meaningful way on the SE(3) manifold, accounting for the non-Euclidean nature of rotations.</p>
+                <p>
+                    <a href="https://github.com/AmirSamanMirjalili/Diamond_Optimization" target="_blank">GitHub Repository</a> |
+                    <a href="https://drive.google.com/file/d/1xQ3zcgaOW9Up-gMPBI9qiqMDW6Fq9o3l/view?usp=sharing" target="_blank">Read the Paper</a> |
+                </p>
             </div>
         </div>
 
-        <div class="project">
-            <h3>Graph-based Calibration Method for Large Scale Suspended CDPRs</h3>
-            <p>Research Project</p>
-            <button class="project-toggle">Show Details</button>
-            <div class="project-details">
-                <p>Description: Developed a novel graph-based calibration method for large scale suspended Cable-Driven Parallel Robots (CDPRs) considering cable-sag.</p>
-                <p>Key achievements:</p>
+        <div class="project fade-in-section">
+            <div class="project-header">
+                <h3>A Graph-Based Self-Calibration Technique for Cable-Driven Robots with Sagging Cable</h3>
+                <img src="./media/Graph_cdpr.gif" alt="Graph-Based Self-Calibration" class="project-thumbnail">
+                <button class="expand-btn">Expand</button>
+            </div>
+            <div class="project-content">
+                <p><strong>Research Project</strong></p>
+                <div class="project-images">
+                    <img src="./media/factor_graph_cdpr.jpg" alt="TagSLAM-based Visual Kinematic Calibration" class="project-image medium">
+                    <img src="./media/Graph_cdpr.gif" alt="TagSLAM-based Visual Kinematic Calibration" class="project-image medium">
+                </div>
+                <p>This project introduces a novel graph-based self-calibration framework for large-scale Cable-Driven Parallel Robots (CDPRs), addressing cable sag effects and simplifying the calibration process.</p>
+                <p><strong>Key features:</strong></p>
                 <ul>
-                    <li>Created a new approach to CDPR calibration</li>
-                    <li>Accounted for cable-sag in large-scale robots</li>
-                    <li>Improved accuracy and reliability of CDPRs</li>
+                    <li>Unified factor graph incorporating a catenary cable model</li>
+                    <li>Iterative refinement of kinematic parameters</li>
+                    <li>Consideration of onboard sensor data and robot's kineto-static model</li>
+                    <li>Demonstrated applicability through Finite Element (FE) simulations</li>
                 </ul>
-                <p>Technologies used: Python, MATLAB, Graph Theory</p>
+                <p><strong>Technologies used:</strong> C++, Python, ROS, Factor Graph Optimization</p>
+                <p>
+                    <a href="https://github.com/MohammadrezaDindarloo/ARASFactorSLAC" target="_blank">GitHub Repository</a> |
+                    <a href="https://drive.google.com/file/d/12x2HPj6vv80_Vc3dRdcnYcD0UGfJlvtS/view?usp=sharing" target="_blank">Read the Paper</a>
+                </p>
+                <h4>Abstract</h4>
+                <p>
+                    The efficient operation of large-scale Cable-Driven Parallel Robots (CDPRs) relies on precise calibration of kinematic parameters and the simplicity of the calibration process. This paper presents a graph-based self-calibration framework that explicitly addresses cable sag effects and facilitates the calibration procedure for large-scale CDPRs by only relying on internal sensors. A unified factor graph is proposed, incorporating a catenary cable model to capture cable sagging. The factor graph iteratively refines kinematic parameters, including anchor point locations and initial cable length, by considering jointly onboard sensor data and the robot's kineto-static model. The applicability and accuracy of the proposed technique are demonstrated through Finite Element (FE) simulations, on both large and small-scale CDPRs subjected to significant initialization perturbations.
+                </p>
+                <p><strong>Index Terms:</strong> Cable-driven parallel robots, Kinematic calibration, Cable sag modeling, Factor graph, Self-calibration</p>
+            </div>
+        </div>
+
+        <div class="project fade-in-section">
+            <div class="project-header">
+                <h3>KukaTools: Calibration tools for Kuka-iiwa14 in MuJoCo</h3>
+                <img src="./media/Kuka.gif" alt="KukaTools Calibration" class="project-thumbnail">
+                <button class="expand-btn">Expand</button>
+            </div>
+            <div class="project-content">
+                <p><strong>Ongoing Research Project</strong></p>
+                <div class="project-images">
+                    <img src="./media/Kuka.gif" alt="TagSLAM-based Visual Kinematic Calibration" class="project-image medium">
+                    <img src="./media/iiwa_14.png" alt="TagSLAM-based Visual Kinematic Calibration" class="project-image medium">
+                </div>
+                <p>This project implements robotics algorithms for the Kuka LBR iiwa 14kg robot using MuJoCo for simulation and visualization. It features a simplified robot description (MJCF) developed by mujoco_menagerie, with added C++ implementations of forward kinematics based on the product of exponentials method.</p>
+                <p><strong>Key features:</strong></p>
+                <ul>
+                    <li>Simplified MJCF model of the LBR iiwa 14kg robot</li>
+                    <li>C++ implementation of forward kinematics using product of exponentials</li>
+                    <li>MuJoCo-based simulation and visualization</li>
+                    <li>Verification of kinematics calculations using MuJoCo</li>
+                </ul>
+                <p><strong>Technologies used:</strong> C++17, CMake, MuJoCo, GLFW3, Eigen3</p>
+                <p>
+                    <a href="https://github.com/AmirSamanMirjalili/Kuka-iiwa14-POE-Forward-Kinematics" target="_blank">GitHub Repository</a>
+                </p>
+                <p><strong>Impact:</strong> This project will significantly reduce the time and resources required for calibrating Kuka robots by allowing users to perfect their calibration procedures in a simulated environment before applying them to physical robots.</p>
+            </div>
+        </div>
+
+        <div class="project fade-in-section">
+            <div class="project-header">
+                <h3>Training A Biped Robot to Walk Using Reinforcement Learning</h3>
+                <img src="./media/Biped.gif" alt="Biped Robot Walking" class="project-thumbnail">
+                <button class="expand-btn">Expand</button>
+            </div>
+            <div class="project-content">
+                <p><strong>Research Project</strong></p>
+                <div class="project-images">
+                    <img src="./media/Biped.gif" alt="Biped Robot Walking" class="project-image medium">
+                    <img src="./media/Biped2.gif" alt="Biped Robot Diagram" class="project-image medium">
+                </div>
+                <p>This project focused on training a biped robot to walk using Deep Deterministic Policy Gradient (DDPG) reinforcement learning techniques.</p>
+                <p><strong>Key features:</strong></p>
+                <ul>
+                    <li>Created a simulation environment for the biped robot</li>
+                    <li>Designed a comprehensive reward function for walking behavior</li>
+                    <li>Implemented DDPG algorithm for training the robot</li>
+                    <li>Successfully trained the agent to walk in a straight line</li>
+                    <li>Analyzed performance and stability of the learned walking gait</li>
+                </ul>
+                <p><strong>Technologies used:</strong>Matlab</p>
+                <p>
+                    <a href="https://github.com/AmirSamanMirjalili/-Biped-Robot-RL" target="_blank">GitHub Repository</a>
+                </p>
+                <p><strong>Impact:</strong> This project demonstrates the potential of reinforcement learning in robotics, particularly in developing complex behaviors like bipedal walking. The techniques developed here can be applied to various robotic systems, potentially improving their adaptability and performance in real-world scenarios.</p>
+            </div>
+        </div>
+
+        <!-- Add this new project after the existing projects -->
+
+        <div class="project fade-in-section">
+            <div class="project-header">
+                <h3>Arastronaut: An Open Source UWB/IMU Hardware and Software For Indoor Positioning</h3>
+                <img src="./media/ARAStronautPCB.jpg" alt="Arastronaut Project" class="project-thumbnail">
+                <button class="expand-btn">Expand</button>
+            </div>
+            <div class="project-content">
+                <p><strong>Research Project</strong></p>
+                <div class="project-images">
+                    <img src="./media/ARAStronautPCB.jpg" alt="Biped Robot Walking" class="project-image medium">
+                    <img src="./media/UWB.jpg" alt="Biped Robot Diagram" class="project-image medium">
+                </div>
+                <p>Arastronaut is an open-source platform integrating hardware and software components to achieve high-precision indoor positioning. The system leverages Ultra-Wideband (UWB) technology for ranging, while incorporating an Inertial Measurement Unit (IMU) to enable future sensor fusion capabilities.</p>
+                <p><strong>Key features:</strong></p>
+                <ul>
+                    <li>Utilizes cost-effective components: ESP32 microcontroller, UWB transceiver, and IMU</li>
+                    <li>Implements Two-Way Ranging (TWR) with Time Division Multiple Access (TDMA)</li>
+                    <li>Incorporates sensor-specific calibration algorithms for enhanced accuracy</li>
+                    <li>Features a sophisticated graphical user interface (GUI) for user accessibility</li>
+                    <li>Demonstrates potential for centimeter-level indoor localization</li>
+                </ul>
+                <p><strong>Technologies used:</strong> ESP32, UWB, IMU, C++, Python</p>
+                <p><strong>Abstract:</strong> Arastronaut is an open-source platform integrating hardware and software components to achieve high-precision indoor positioning. At its core, the system leverages Ultra-Wideband (UWB) technology for ranging, while incorporating an Inertial Measurement Unit (IMU) to enable future sensor fusion capabilities. The system utilizes readily available, cost-effective components including an ESP32 microcontroller, A UWB transceiver, and an IMU. The architecture prioritizes real-time operation and modularity for flexible tag/anchor deployment. Currently, the software implements Two-Way Ranging (TWR) with Time Division Multiple Access (TDMA) for precise distance measurement and robust time synchronization. Furthermore, it incorporates sensor-specific calibration algorithms for enhanced accuracy. A sophisticated graphical user interface (GUI) has been developed to facilitate user accessibility, streamline calibration processes, and enable seamless data fusion for sensor fusion applications. Initial experimental results validate the performance of individual UWB and IMU modules, demonstrating the platform's potential for centimeter-level indoor localization and paving the way for future integrated sensor fusion implementations.</p>
+                <p>
+                    <a href="https://github.com/mehtivakili/Arastronaut" target="_blank">GitHub Repository</a> |
+                    <a href="https://link-to-your-paper.com" target="_blank">Under Review</a>
+                </p>
             </div>
         </div>
 
@@ -148,22 +230,53 @@
 
     </main>
 
+    
+
     <footer>
         <p>&copy; 2024 Amir Saman Mirjalili. All rights reserved.</p>
     </footer>
 
     <script>
-        document.querySelectorAll('.project-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const details = button.nextElementSibling;
-                if (details.style.display === 'none' || details.style.display === '') {
-                    details.style.display = 'block';
-                    button.textContent = 'Hide Details';
+        document.querySelectorAll('.project-header').forEach(header => {
+            header.addEventListener('click', function(e) {
+                // Prevent the click from triggering on child elements
+                if (e.target !== this) return;
+                
+                const project = this.closest('.project');
+                const expandBtn = this.querySelector('.expand-btn');
+                project.classList.toggle('expanded');
+                expandBtn.textContent = project.classList.contains('expanded') ? 'Collapse' : 'Expand';
+            });
+        });
+
+        document.querySelectorAll('.expand-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent the click from bubbling up to the header
+                const project = this.closest('.project');
+                project.classList.toggle('expanded');
+                this.textContent = project.classList.contains('expanded') ? 'Collapse' : 'Expand';
+            });
+        });
+
+        const faders = document.querySelectorAll('.fade-in-section');
+
+        const appearOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
                 } else {
-                    details.style.display = 'none';
-                    button.textContent = 'Show Details';
+                    entry.target.classList.remove('is-visible');
                 }
             });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
         });
     </script>
 </body>
