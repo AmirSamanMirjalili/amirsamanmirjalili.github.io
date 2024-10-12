@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="header-content">
             <div class="header-text">
                 <h1>Amir Saman Mirjalili</h1>
-                <nav>
+            </div>
+            <div class="nav-container">
+                <button class="dropdown-btn">Menu</button>
+                <nav class="dropdown-content">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
@@ -15,23 +18,32 @@ document.addEventListener('DOMContentLoaded', function() {
                     </ul>
                 </nav>
             </div>
-            <div id="personal-image" class="personal-image"></div>
         </div>
     </div>
     `;
 
     document.querySelector('header').innerHTML = headerContent;
 
-    // Load the image separately with caching
-    const img = new Image();
-    img.onload = function() {
-        document.getElementById('personal-image').style.backgroundImage = `url(${img.src})`;
-    };
-    img.src = 'media/personal.JPG';
+    const dropdownBtn = document.querySelector('.dropdown-btn');
+    const dropdownContent = document.querySelector('.dropdown-content');
 
-    // Set cache control headers
-    const meta = document.createElement('meta');
-    meta.httpEquiv = "Cache-Control";
-    meta.content = "public, max-age=31536000"; // Cache for one year
-    document.head.appendChild(meta);
+    // Toggle menu on button click
+    dropdownBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownContent.classList.toggle('show');
+        document.body.classList.toggle('menu-open');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.nav-container')) {
+            dropdownContent.classList.remove('show');
+            document.body.classList.remove('menu-open');
+        }
+    });
+
+    // Prevent menu from closing when clicking inside it
+    dropdownContent.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
 });
